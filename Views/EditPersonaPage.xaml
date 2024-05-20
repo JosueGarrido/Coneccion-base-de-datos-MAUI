@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jgarrido_s5.Views.EditPersonaPage"
+             Title="EditPersonaPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="ACTUALIZAR PERSONA"
+            FontSize="20"
+            HorizontalTextAlignment="Center" />
+
+        <Entry x:Name="txtPersona" Placeholder="Ingrese Nombre"/>
+
+        <Grid Padding="5" RowSpacing="1" ColumnSpacing="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnGuardar" Text="Guardar Persona" Grid.Row="0" Grid.Column="0" Clicked="btnSave_Clicked" />
+
+            
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

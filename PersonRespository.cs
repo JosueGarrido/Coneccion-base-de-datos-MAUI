@@ -60,5 +60,44 @@ namespace jgarrido_s5
             }
             return new List<Persona>();
         }
+
+        public void EditPerson(Persona persona)
+        {
+            try
+            {
+                Init();
+
+                if (persona is null)
+                    throw new Exception("Persona requerida");
+
+                conn.Update(persona);
+
+                StatusMessage = string.Format("{0} record(s) updated (Nombre: {1})", 1, persona.Name);
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = string.Format("Failed to update {0}. Error: {1}", persona.Name, ex.Message);
+            }
+        }
+
+        public void DeletePerson(Persona persona)
+        {
+            try
+            {
+                Init();
+
+                if (persona is null)
+                    throw new Exception("Persona requerida");
+
+                conn.Delete(persona);
+
+                StatusMessage = string.Format("{0} record(s) deleted (Nombre: {1})", 1, persona.Name);
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = string.Format("Failed to delete {0}. Error: {1}", persona.Name, ex.Message);
+            }
+        }
+
     }
 }

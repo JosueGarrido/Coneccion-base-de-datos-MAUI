@@ -9,7 +9,7 @@ namespace jgarrido_s5
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new vPersona());
+            MainPage = new NavigationPage(new Estudiantes());
             personRepo = personRespository;
         }
     }
